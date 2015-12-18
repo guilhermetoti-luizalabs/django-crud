@@ -1,0 +1,10 @@
+<h1>Promocionais</h1>
+<ul>
+    {% for promotional in object_list %}
+    <li>{{ promotional.name }}:
+    <a href="{% url "promotional_delete" promotional.id %}">Apagar</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<a href="{% url "promotional_new" %}">Novo</a>
