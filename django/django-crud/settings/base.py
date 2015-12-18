@@ -96,6 +96,19 @@ TEMPLATES = [
     },
 ]
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'OPTIONS': {
+            'read_default_file': os.path.join(
+                BASE_PATH,
+                'settings',
+                'mysql.cnf'
+            ),
+        }
+    }
+}
+
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
