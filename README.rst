@@ -14,16 +14,22 @@ Install requirements via ``pip``: ::
     pip install django/requirements/development.txt
 
 
+Make migrations: ::
+
+    # on django/django-crud
+    ./manage.py makemigrations
+
+
 Create database tables: ::
 
     # on django/django-crud
-    ./manage.py syncdb --all --settings=settings.development
+    ./manage.py syncdb
 
 
 Run the project: ::
 
     # on django/django-crud
-    ./manage.py runserver --settings=settings.development
+    ./manage.py runserver
 
 
 Tests
